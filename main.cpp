@@ -260,6 +260,38 @@ int main(int argc, char *argv[]) {
             KeyorIdef();
         } else if (IsDigit()) {
             UConst();
+        } else if (ch == '=') {
+            Concat();
+            strToken[Tpos] = '\0';
+            outans(5, 1);
+        } else if (ch == '+') {
+            Concat();
+            strToken[Tpos] = '\0';
+            outans(5, 2);
+        } else if (ch == '-') {
+            Concat();
+            strToken[Tpos] = '\0';
+            outans(5, 3);
+        } else if (ch == '*') {
+            Concat();
+            strToken[Tpos] = '\0';
+            outans(5, 4);
+        } else if (ch == '/') {
+            Concat();
+            strToken[Tpos] = '\0';
+            outans(5, 5);
+        } else if (ch == '(') {
+            Concat();
+            strToken[Tpos] = '\0';
+            outans(6, 2);
+        } else if (ch == '(') {
+            Concat();
+            strToken[Tpos] = '\0';
+            outans(6, 3);
+        } else if (ch == ';') {
+            Concat();
+            strToken[Tpos] = '\0';
+            outans(6, 1);
         } else {
             printerror();
         }
