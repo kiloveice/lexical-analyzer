@@ -244,14 +244,27 @@ void printerror() {//输出错误
     cout << "error! " << strToken << endl;
 }
 
-int main(int argc, char *argv[]) {
-    in.open(R"(E:\just ice\Compiling principle\lexical analyzer\in.txt)", ios::binary);
-    //初始化操作
+void Keywordinit() {
+    ifstream Keyin(R"(E:\just ice\Compiling principle\lexical-analyzer\in.txt)");
+    string s;
+    int ID;
+    while (Keyin >> s >> ID) {
+        Keyword_List[s] = ID;
+    }
+}
+
+void init() {
     ch = ' ';
     s_pos = e_pos = pos = 0;
     in.seekg(0, ios::end);
     txtalllenth = in.tellg();
     in.seekg(0, ios::beg);
+}
+
+int main(int argc, char *argv[]) {
+    in.open(R"(E:\just ice\Compiling principle\lexical-analyzer\in.txt)", ios::binary);
+    //初始化操作
+    init();
 
     while ((pos < e_pos) || (in.good() && !in.eof())) {
         GetBC();//读取空字符
@@ -264,36 +277,45 @@ int main(int argc, char *argv[]) {
             Concat();
             strToken[Tpos] = '\0';
             outans(5, 1);
+            ch = ' ';
         } else if (ch == '+') {
             Concat();
             strToken[Tpos] = '\0';
             outans(5, 2);
+            ch = ' ';
         } else if (ch == '-') {
             Concat();
             strToken[Tpos] = '\0';
             outans(5, 3);
+            ch = ' ';
         } else if (ch == '*') {
             Concat();
             strToken[Tpos] = '\0';
             outans(5, 4);
+            ch = ' ';
         } else if (ch == '/') {
             Concat();
             strToken[Tpos] = '\0';
             outans(5, 5);
+            ch = ' ';
         } else if (ch == '(') {
             Concat();
             strToken[Tpos] = '\0';
             outans(6, 2);
-        } else if (ch == '(') {
+            ch = ' ';
+        } else if (ch == ')') {
             Concat();
             strToken[Tpos] = '\0';
             outans(6, 3);
+            ch = ' ';
         } else if (ch == ';') {
             Concat();
             strToken[Tpos] = '\0';
             outans(6, 1);
+            ch = ' ';
         } else {
             printerror();
+            break;
         }
     }
     in.close();
