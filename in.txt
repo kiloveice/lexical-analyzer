@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 12345 6789
 123.456
 1e-2
@@ -6,4 +10,12 @@ def
 aa
 12345
 123.456
+<<<<<<< Updated upstream
 aa
+=======
+aa
+=======
+int main()
+int a=2;
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
