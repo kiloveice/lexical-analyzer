@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "E:/just ice/Compiling principle/lexical analyzer/main.cpp" "E:/just ice/Compiling principle/lexical analyzer/cmake-build-debug/CMakeFiles/lexical_analyzer.dir/main.cpp.obj"
+  "E:/just ice/Compiling principle/lexical-analyzer/main.cpp" "E:/just ice/Compiling principle/lexical-analyzer/cmake-build-debug/CMakeFiles/lexical_analyzer.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

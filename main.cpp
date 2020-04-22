@@ -273,8 +273,6 @@ int main(int argc, char *argv[]) {
             KeyorIdef();
         } else if (IsDigit()) {
             UConst();
-<<<<<<< Updated upstream
-=======
         } else if (ch == '=') {
             Concat();
             strToken[Tpos] = '\0';
@@ -315,7 +313,6 @@ int main(int argc, char *argv[]) {
             strToken[Tpos] = '\0';
             outans(6, 1);
             ch = ' ';
->>>>>>> Stashed changes
         } else {
             printerror();
             break;
