@@ -1,2 +1,1 @@
-*.h linguist-language=cpp
-*.m linguist-language=cpp
+*.html linguist-language=cpp
